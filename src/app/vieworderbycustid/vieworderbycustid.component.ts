@@ -31,11 +31,7 @@ export class VieworderbycustidComponent implements OnInit {
       console.log(error);
       this.msg=error.error.message;
       this.orderproducts=undefined;
-      
-
     });
-
-
   }
 
 }

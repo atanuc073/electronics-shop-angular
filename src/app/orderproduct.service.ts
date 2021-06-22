@@ -13,4 +13,9 @@ export class OrderproductService {
   viewOrdersById(custid:number):Observable<any>{
     return this.http.get("http://localhost:8082/elecapp/viewordersbycustid/"+custid);
   }
+  makeOrderById(custid:number):Observable<any>{
+    return this.http.get("http://localhost:8082/elecapp/addorderproduct/"+custid)
+  }
+
+  
 }

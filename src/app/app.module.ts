@@ -5,11 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VieworderbycustidComponent } from './vieworderbycustid/vieworderbycustid.component';
 import { FormsModule } from '@angular/forms';
+import { CreateorderComponent } from './createorder/createorder.component';
+import { ViewbasketitemsbyidComponent } from './viewbasketitemsbyid/viewbasketitemsbyid.component';
+import { EventEmitterService } from './event-emitter.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VieworderbycustidComponent
+    VieworderbycustidComponent,
+    CreateorderComponent,
+    ViewbasketitemsbyidComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule
 
   ],
-  providers: [],
+  providers: [
+    EventEmitterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
