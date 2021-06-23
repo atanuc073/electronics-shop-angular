@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { CreateorderComponent } from './createorder/createorder.component';
 import { ViewbasketitemsbyidComponent } from './viewbasketitemsbyid/viewbasketitemsbyid.component';
 import { EventEmitterService } from './event-emitter.service';
+import { CancelorderComponent } from './cancelorder/cancelorder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VieworderbycustidComponent,
     CreateorderComponent,
-    ViewbasketitemsbyidComponent
+    ViewbasketitemsbyidComponent,
+    CancelorderComponent
   ],
   imports: [
     BrowserModule,

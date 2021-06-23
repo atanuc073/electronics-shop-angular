@@ -37,7 +37,7 @@
       <td>{{o.orderDate | date:"dd/MMM/yyyy"}}</td>
       <td>{{o.totalCost | currency:'INR'}}</td>
       <td>{{o.orderStatus | titlecase}}</td>
-      <td><button class="btn btn-danger">Remove</button></td>
+      <td><button class="btn btn-danger" routerLink="removeorder/{{o.orderId}}">Remove</button></td>
       <td><button class="btn btn-primary">Make Payment</button></td>
     </tr>
   </tbody>

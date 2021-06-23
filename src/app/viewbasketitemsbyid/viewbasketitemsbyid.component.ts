@@ -45,19 +45,7 @@ export class ViewbasketitemsbyidComponent implements OnInit {
       this.totalcost=element.productDetails.price+this.totalcost; 
     });
   }
-  makeOrder(){
-    this.orderproductservice.makeOrderById(this.custid).subscribe(data=>{
-      console.log(data);
-      this.creatorderId=data;
 
-    },
-    error=>{
-      this.reset();
-      console.log(error);
-      this.createOrderMsg=error.error.message
-    })
-    
-  }
   reset():void{
     this.totalcost=0;
     this.msg=undefined;

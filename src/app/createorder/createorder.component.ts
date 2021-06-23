@@ -18,8 +18,22 @@ export class CreateorderComponent implements OnInit {
     this.route.paramMap.subscribe(params=>{
       // let custid:number = parseInt(params.get(""))
       console.log(params);
+      let custid:number=parseInt(params.get("custid"));
+      this.orderproductservice.makeOrderById(custid).subscribe(data=>{
+        console.log(data);
+  
+      },
+      error=>{
+        // this.reset();
+        console.log(error);
+        this.msg=error.error.message;
+        
+        // this.createOrderMsg=error.error.message
+      })
     })
 
   }
+   
+  }
 
-}
+
