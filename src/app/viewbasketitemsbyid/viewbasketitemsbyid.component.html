@@ -17,7 +17,7 @@
   {{msg}}
 </div>
 
-<table class="table">
+<table class="table" *ngIf="baskets!=undefined">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Basket-Id</th>
@@ -42,10 +42,11 @@
     <tr class="bg-dark text-white" *ngIf="totalcost>0">
       <td colspan="3">Total Price</td>
       <td>{{totalcost | currency:'INR'}}</td>
-      <td><button class="btn btn-danger" style="float: right;" routerLink="/placeorder/bycustid" (click)="makeOrder()">Order All Products</button></td>
+      <td><button class="btn btn-danger" style="float: right;" routerLink="/placeorder/bycustid/{{baskets[0].customer.customerId}}" >Order All Products</button></td>
       <td></td>
     </tr>
   </tbody>
 </table>
+<!-- <input class="btn btn-danger" style="float: right;" routerLink="/placeorder/bycustid" value="Order All Products"/> -->
 
 
