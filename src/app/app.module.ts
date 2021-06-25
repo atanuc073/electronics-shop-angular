@@ -3,20 +3,22 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VieworderbycustidComponent } from './vieworderbycustid/vieworderbycustid.component';
+
 import { FormsModule } from '@angular/forms';
 import { CreateorderComponent } from './createorder/createorder.component';
-import { ViewbasketitemsbyidComponent } from './viewbasketitemsbyid/viewbasketitemsbyid.component';
+import { VieworderbycustidComponent } from './vieworderbycustid/vieworderbycustid.component';
 import { EventEmitterService } from './event-emitter.service';
 import { CancelorderComponent } from './cancelorder/cancelorder.component';
+
+import { ViewitemsbycustComponent } from './viewitemsbycust/viewitemsbycust.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VieworderbycustidComponent,
     CreateorderComponent,
-    ViewbasketitemsbyidComponent,
-    CancelorderComponent
+    CancelorderComponent,
+    ViewitemsbycustComponent
   ],
   imports: [
     BrowserModule,
